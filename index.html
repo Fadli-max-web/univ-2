@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kenangan Kita</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .page {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      padding: 30px;
+      color: white;
+      text-shadow: 1px 1px 5px black;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      animation: fadeSlide 0.8s ease both;
+    }
+
+    .active {
+      display: flex;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      animation: fadeInUp 1s ease both;
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 600px;
+      line-height: 1.6;
+      animation: fadeInUp 1.2s ease both;
+      color: #ffffff; /* warna teks cerah */
+    }
+
+    .box {
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      max-width: 700px;
+      max-height: 60vh;
+      overflow-y: auto;
+      animation: fadeInUp 1.1s ease both;
+    }
+
+    .box::-webkit-scrollbar {
+      width: 6px;
+    }
+    .box::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+    }
+    .box::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    button {
+      padding: 12px 24px;
+      margin: 10px;
+      border: 1px solid rgba(173, 216, 230, 0.6);
+      border-radius: 15px;
+      font-size: 1em;
+      background-color: rgba(173, 216, 230, 0.2);
+      color: #e6f7ff;
+      font-weight: bold;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease, background-color 0.3s, border 0.3s, color 0.3s;
+      animation: fadeInUp 1.4s ease both;
+      box-shadow: 0 0 15px rgba(173, 216, 230, 0.3);
+      text-shadow: 0 0 3px rgba(0,0,0,0.5);
+    }
+
+    button:hover {
+      background-color: rgba(173, 216, 230, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      color: white;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Halaman Utama -->
+  <div id="home" class="page active" style="background-image: url('background5.jpeg');">
+    <h1>Kenangan Manis Kita 💞</h1>
+    <button onclick="showPage('kenal')">💌 Saat Pertama Kali Kenal</button>
+    <button onclick="showPage('duaMinggu')">🎉 Ucapan 2 Minggu Pacaran</button>
+    <button onclick="showPage('masaDepan')">🌈 Harapan Masa Depan Kita</button>
+  </div>
+
+  <!-- Halaman Kenalan -->
+  <div id="kenal" class="page" style="background-image: url('background1.jpeg');">
+    <h1>Saat Pertama Kali Kenal 😳</h1>
+    <div class="box">
+      <p>awalnya mass cumaa isengg bukaa aplikasi chatt ituuu (PopUp-Chat), cumaa carii temenn ngobroln biarr gaa boseenn doangg. gaa kepikiraann bakall ketemuuu oranggg kayakk kamuuu.</p>
+      <p>pass kitaa mulaii chatt, biasaa ajaa sii, kayakk duaa orangg baruu kenall. Tapii anehh, ngobrollnyaa langsungg nyambungg gituu ajaa.. gaa lamaa teruss tukeraann nomorr WhatsApp.</p>
+      <p>darii situu, kitaa makiinn seringg chatt, makinn akrabb, dan mass mulaii ngerasaa nyamaann bangeettt. darii nyamann ituu, muncull rasaa yangg gatauu darii manaa tapii makiinn lamaa makiinn kerasaa.</p>
+      <p>gaa nyangkaa bangeett, darii aplikasi buatt carii temeenn ituu, mass malahh nemuu kamuu. seseorangg yangg bikiinn mass senyuumm sendirii pass bacaa chatt kamuu, yangg bikiinn harii-harii mass jadii lebihh berwarnaa cumaa garaa-garaaa satuu pesaann singkaatt.</p>
+      <p>mass gaa tauu inii bakall kemanaa, tapii yangg jelaass mass senengg bangeett kenaall kamuu, walaupunn caraa kitaa kenallnyaa radaa gaa biasaa.</p>
+    </div>
+    <button onclick="showPage('home')">🔙 Kembali</button>
+  </div>
+
+  <!-- Halaman 2 Minggu -->
+  <div id="duaMinggu" class="page" style="background-image: url('background2.jpeg');">
+    <h1>Selamat 2 Minggu Sayang 💖</h1>
+    <div class="box">
+      <p>enggaa kerasaa yaa?? ternyataa kitaa udahh dua mingguu berhubungaann. mungkiinn kedengarannyaa beluumm lamaa, tapii gatauu kenapaa, rasanyaa udahh banyaakk bangeett hall yangg kitaa lewatiinn barengg. mulaii darii obrolann randomm yangg bikiinn ketawaa sendirii, sampee momenn keciill yangg bikiinn mass makinn sayaanggg samaa kamuuu.</p>
+      <p>mass masiihh ingeettt bangett awaal kita saling kenall, ngobroll malu-malu, salingg nanyaa inii ituu, teruuss tibaa-tibaa jadii seriingg chatting an tiapp harii. dan sekarangg, kamuu jadii bagiann yangg selaluu mass tungguu-tungguu setiapp hariinyaa. rasanyaa bedaa ajaaa, adaa kamuuu tuuu bikiinn hiduuppp mass lebihh rameee, lebiihh hangaattt, dan lebiihhh bermaknaaa.</p>
+      <p>makaasii yaa udaa mauu nerimaa mass apaa adanyaa, dengann segalaa kekurangann mass yangg kadangg nyebeliini. kamuu selaluu bikinn mass semangaatt, bikinn mass tenangg, dann yangg palingg pentingg... biikinn mass sangatt  yakinn kalauu rasaa inii cumaa buatt kamuu seorangg.</p>
+      <p>semogaa duaa mingguu inii jadii awall darii banyaakkk mingguu-mingguu lainn yangg bakall kitaa lewatinn bareng-bareng. mass gaa mintaa apaa apaa, cukupp kitaa salingg jagaa, salingg percaayaaa, dann salinggg sayaanggg. karenaa kalauu kamuu tetepp disinii, mass janjii bakall teruss adaa buatt kamuu.</p>
+      <p>selamatt yangg ke 2 mingguu yaaa sayaanggg..</p>
+      <p>mass sayaanggg kamuuu. LOVE YOU❤️</p>
+      <P>darii kekasih muu yangg selaluu memikirkann kamuu setiapp saat.</P>
+    </div>
+    <button onclick="showPage('home')">🔙 Kembali</button>
+  </div>
+
+  <!-- Halaman Masa Depan -->
+  <div id="masaDepan" class="page" style="background-image: url('background3.jpeg');">
+    <h1>Untuk Masa Depan Kita 🌠</h1>
+    <div class="box">
+      <p>kadaangg mass sukaa mikirr, kiraa- kiraa masaa depaann kitaa bakall kayakk gimanaa yaa?? meskipunn kitaa belumm tauu jawabann nyaa, tapii mass selaluu punyaa harapann yangg besarr buatt kedepann nyaa. </p>
+      <p>mass pengeennn bangeett suatuu harii nantii kitaa bisaa dudukk barenagg, ceritaa-ceritaa. darii obrolaann ramdomm, salingg maluu-maluu, sampee akhirr nyaa bisaa sejauuhh inii. dan semogaa, bukann sejauuhhh inii... tapii jugaa sejauuhh mungkiinn.</p>
+      <p>mass gaa janjii jadii pasangaannn yangg sempurnaa, tapii masss janjii akann teruss belajarr jadii yangg sempurrnaa dann yangg terbaikk buatt kamuu, buatt hubungann kitaa, dann buatt masaa depann kitaa.</p>
+      <p>kitaa mungkiinn massii belajaarr banyaakk hall tentangg satuu samaa lainn. tapii mass yakinn, selamaa adaa rasaa sayaanggg, salingg jagaa, dann salingg percayaa, kitaa bisaaa tumbuhh jadii pasaangaann yangg kuatt.</p>
+      <p>semogaaa semuaa harapaannn baikk tentangg kitaa bisaa jadii kenyaataan. dann kalauu suatuu harii nantii kitaa berhasill mewujuddkann ituu semuaaa, mass pengenn bilangg samaa kamuu: "terimakasihh udaa bertahann dann gaa nyeraa samaa keadaan kitaa."</p>
+    </div>
+    <button onclick="showPage('home')">🔙 Kembali</button>
+  </div>
+
+  <script>
+    function showPage(pageId) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(p => {
+        p.classList.remove('active');
+        p.style.display = "none";
+      });
+      const nextPage = document.getElementById(pageId);
+      nextPage.style.display = "flex";
+      nextPage.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
